@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+     <title>Shopping Virtual NLima</title>
+     <style>
+         body {
+              background-color: #121212;
+              color: white;
+              font-family: Arial, sans-serif;
+              padding: 0;
+              margin: 0;
+         }
+
+         /* --- TOPO: LOGO E TÍTULO PRINCIPAL --- */
+         .topo-container {
+              background-color: #0b0c10;
+              padding: 30px 20px;
+              box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+              border-bottom: 2px solid #1db954;
+              text-align: center;
+         }
+         
+         .logo-shopping h1 {
+              margin: 0;
+              font-size: 32px;
+              color: #ffffff;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+         }
+         
+         .logo-shopping span {
+              color: #1db954;
+         }
+
+         /* --- SEÇÃO DE PATROCINADORES (8 ESPAÇOS) --- */
+         .container-patrocinadores {
+              max-width: 1200px;
+              margin: 30px auto 10px auto;
+              padding: 0 20px;
+              display: grid;
+              grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas grandes */
+              gap: 20px;
+         }
+
+         @media (max-width: 900px) {
+              .container-patrocinadores {
+                   grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+              }
+         }
+
+         @media (max-width: 500px) {
+              .container-patrocinadores {
+                   grid-template-columns: 1fr; /* 1 coluna em celulares */
+              }
+         }
+
+         .box-anuncio {
+              height: 150px;
+              border: 2px dashed #555;
+              background: #000;
+              position: relative;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 6px;
+              transition: border-color 0.3s;
+         }
+
+         .box-anuncio:hover {
+              border-color: #1db954;
+         }
+         
+         .box-anuncio img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+         }
+
+         .tag-anuncio {
+              position: absolute;
+              top: 8px;
+              right: 8px;
+              background-color: rgba(0,0,0,0.8);
+              color: #1db954;
+              padding: 2px 8px;
+              font-size: 10px;
+              font-weight: bold;
+              border-radius: 4px;
+              z-index: 10;
+         }
+
+         /* --- SEÇÃO DE NOVIDADES / PRODUTOS --- */
+         .titulo-secao {
+              text-align: center;
+              margin-top: 50px;
+              color: #1db954;
+              font-size: 24px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+         }
+
+         .container-noticias {
+              max-width: 1200px;
+              margin: 0 auto;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 25px;
+              padding: 20px 20px 40px 20px;
+              text-align: left;
+         }
+
+         @media (max-width: 800px) {
+              .container-noticias {
+                   grid-template-columns: repeat(2, 1fr);
+              }
+         }
+
+         @media (max-width: 550px) {
+              .container-noticias {
+                   grid-template-columns: 1fr;
+              }
+         }
+
+         .card-noticia {
+              background-color: #1e1e1e;
+              border-radius: 8px;
+              overflow: hidden;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+              display: flex;
+              flex-direction: column;
+              transition: transform 0.2s;
+         }
+
+         .card-noticia:hover {
+              transform: translateY(-4px);
+         }
+
+         .card-noticia img {
+              width: 100%;
+              height: 180px;
+              object-fit: cover;
+              background-color: #2b2b2b;
+         }
+
+         .conteudo-noticia {
+              padding: 15px;
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+         }
+
+         .titulo-noticia {
+              font-size: 16px;
+              font-weight: bold;
+              margin: 0 0 10px 0;
+              color: #ffffff;
+              line-height: 1.4;
+         }
+
+         .resumo-noticia {
+              font-size: 13px;
+              color: #aaaaaa;
+              margin-bottom: 15px;
+              line-height: 1.5;
+              flex-grow: 1;
+         }
+
+         .btn-ler-mais {
+              color: #1db954;
+              text-decoration: none;
+              font-weight: bold;
+              font-size: 13px;
+              margin-top: auto;
+         }
+
+         .btn-ler-mais:hover {
+              text-decoration: underline;
+         }
+     </style>
+</head>
+<body>
+
+     <div class="topo-container">
+         <div class="logo-shopping">
+              <h1>Shopping Virtual <span>Lima França</span></h1>
+         </div>
+     </div>
+
+     <div class="container-patrocinadores">
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio1.png" alt="Patrocinador 1" onerror="this.style.display='none';">
+               </a>
+          </div>
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio2.png" alt="Patrocinador 2" onerror="this.style.display='none';">
+               </a>
+          </div>
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio3.png" alt="Patrocinador 3" onerror="this.style.display='none';">
+               </a>
+          </div>
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio4.png" alt="Patrocinador 4" onerror="this.style.display='none';">
+               </a>
+          </div>
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio5.png" alt="Patrocinador 5" onerror="this.style.display='none';">
+               </a>
+          </div>
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio6.png" alt="Patrocinador 6" onerror="this.style.display='none';">
+               </a>
+          </div>
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio7.png" alt="Patrocinador 7" onerror="this.style.display='none';">
+               </a>
+          </div>
+          <div class="box-anuncio">
+               <span class="tag-anuncio">Patrocínio</span>
+               <a href="https://wa.me/5561984912720" target="_blank" title="Anuncie Conosco">
+                   <img src="patrocinio8.png" alt="Patrocinador 8" onerror="this.style.display='none';">
+               </a>
+          </div>
+     </div>
+
+     <h2 class="titulo-secao">Destaques do Shopping</h2>
+     <div class="container-noticias" id="lista-noticias"></div>
+
+     <script>
+         const noticiasSuporte = [
+              { title: "Tendências de Moda para a Estação", summary: "Confira as principais coleções e peças que estão dominando as vitrines virtuais este mês.", url: "#", img: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=250&fit=crop" },
+              { title: "Guia de Eletrônicos e Gadgets", summary: "Os dispositivos inteligentes que prometem facilitar sua rotina doméstica e profissional.", url: "#", img: "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=400&h=250&fit=crop" },
+              { title: "Gastronomia Integrada", summary: "Descubra novas opções de alimentação com entrega rápida e cupons exclusivos no portal.", url: "#", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=250&fit=crop" },
+              { title: "Design de Interiores e Conforto", summary: "Móveis e itens de decoração modernos para transformar o ambiente do seu lar ou escritório.", url: "#", img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&h=250&fit=crop" },
+              { title: "Cosméticos e Bem-Estar", summary: "Encontre produtos de cuidados pessoais com formulações tecnológicas e sustentáveis.", url: "#", img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=250&fit=crop" },
+              { title: "Esportes e Vida Saudável", summary: "Equipamentos e vestuários recomendados para otimizar suas atividades físicas diárias.", url: "#", img: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&h=250&fit=crop" }
+         ];
+
+         function carregarNoticias() {
+              const container = document.getElementById('lista-noticias');
+              
+              noticiasSuporte.forEach(item => {
+                   const card = document.createElement('div');
+                   card.className = 'card-noticia';
+                   
+                   card.innerHTML = `
+                       <img src="${item.img}" alt="Notícia">
+                       <div class="conteudo-noticia">
+                           <p class="titulo-noticia">${item.title}</p>
+                           <p class="resumo-noticia">${item.summary}</p>
+                           <a href="${item.url}" class="btn-ler-mais">Ver detalhes →</a>
+                       </div>
+                   `;
+                   container.appendChild(card);
+              });
+         }
+
+         carregarNoticias();
+     </script>
+</body>
+</html>
